@@ -1,0 +1,18 @@
+How to run?
+
+1.      cd $EE6470
+2.      git clone https://github.com/jieyunma/ee6470_final.git
+3.      type "mkdir riscv-vp/sw/single-core; cp -r ee6470_final/src_single/* $EE6470/riscv-vp/sw/single-core/"
+4.      type "mkdir riscv-vp/sw/multi-core; cp -r ee6470_final/src_multi/* $EE6470/riscv-vp/sw/multi-core/"
+5.      type "mkdir riscv-vp/vp/src/platform/tiny32-single;
+				cp -r ee6470_final/platform_single/* $EE6470/riscv-vp/vp/src/platform/tiny32-single"
+6.      type "mkdir riscv-vp/vp/src/platform/tiny32-multi;
+				cp -r ee6470_final/platform_multi/* $EE6470/riscv-vp/vp/src/platform/tiny32-multi"
+8.		Add "subdirs(tiny32-single)" and "subdirs(tiny32-multi)" in $EE6470/risc-vp/vp/src/platform/CMakeList.txt
+9.      Change directory to riscv-vp/vp/build/, type "cd $EE6470/riscv-vp/build"
+10.		Build platforms, type "cmake .." and "make install"
+11.		Change directory to riscv-vp/sw/single-core/, type "cd $EE6470/riscv-vp/sw/single-core/"
+12.		Do the simulation, type "make" and "make sim"
+13.		Change directory to riscv-vp/sw/multi-core/, type "cd $EE6470/riscv-vp/sw/multi-core/"
+14.		Do the simulation, type "make" and "make sim"
+15.		HLS results is in https://github.com/jieyunma/ee6470_mid.git
